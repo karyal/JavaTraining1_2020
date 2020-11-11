@@ -1,0 +1,102 @@
+package oop.concepts;
+
+class NewStudent{
+	//Data Members | Member Variables | Instance Variables
+	private double sub1;
+	private double sub2;
+	private double sub3;
+	private double sub4;
+	
+	private double total;
+	private double average;
+	private String result;
+	
+	//Default Constructor | Object Initialization Time - with default values
+	public NewStudent() {
+		this.sub1=0.0;
+		this.sub2=0.0;
+		this.sub3=0.0;
+		this.sub4=0.0;
+		
+		this.total=0.0;
+		this.average=0.0;
+		this.result="";
+	}
+	
+	//Parameterized Constructor | Object Initialization Time - with user given values
+	public NewStudent(double sub1, double sub2, double sub3, double sub4) {
+		this.sub1=sub1;
+		this.sub2=sub2;
+		this.sub3=sub3;
+		this.sub4=sub4;
+		
+		this.total=0.0;
+		this.average=0.0;
+		this.result="";
+	}
+	
+	//Getters
+	public double getSub1() {
+		return (this.sub1);
+	}
+	public double getSub2() {
+		return (this.sub2);
+	}
+	public double getSub3() {
+		return (this.sub3);
+	}
+	public double getSub4() {
+		return (this.sub4);
+	}
+	public double getTotal() {
+		return (this.total);
+	}
+	public double getAverage() {
+		return (this.average);
+	}
+	public String getResult() {
+		return (this.result);
+	}
+	
+	//Setters
+	public void setSub1(double sub1) {
+		this.sub1=sub1;
+	}
+	public void setSub2(double sub2) {
+		this.sub2=sub2;
+	}
+	public void setSub3(double sub3) {
+		this.sub3=sub3;
+	}
+	public void setSub4(double sub4) {
+		this.sub4=sub4;
+	}
+	
+	//Processing Methods
+	public void calcTotal() {
+		this.total = this.sub1+this.sub2+this.sub3+this.sub4;
+	}
+	
+	public void calcAverage() {
+		this.average = this.total/4;
+	}
+	
+	public void calcResult() {
+		if (this.sub1>=40 && this.sub2>=40 && this.sub3>=40 && this.sub4>=40) {
+			this.result="PASS";
+		}
+		else {
+			this.result="FAIL";
+		}
+	}
+	
+	public void processResult() {
+		this.calcTotal();
+		this.calcAverage();
+		this.calcResult();
+	}
+	
+	public String toString() {
+		return (this.sub1+", "+this.sub2+", "+this.sub3+", "+this.sub4+", "+this.total+", "+this.average+", "+this.result);
+	}
+}

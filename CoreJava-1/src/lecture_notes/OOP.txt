@@ -1,0 +1,34 @@
+Object Oriented Programming (OOP)
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+Task:-
+Student Class
+- rollNo
+- fullName
+- grade
+- section
+- sub1
+- sub2
+- sub3
+- sub4
+- total
+- average
+- result
+
+// all data members (variables) //instance variable - private
+// default constructor - default value set for all
+// parameterized constructor - rollNo to sub4
+	- set default value set for total, average, result
+//getter for all
+//setter for all
+//toString for all
+//process method - process value set internally
+	- calcTotal()
+	- calcAverage()
+	- calcResult()
+
+Student Test
+- Test Student Class
