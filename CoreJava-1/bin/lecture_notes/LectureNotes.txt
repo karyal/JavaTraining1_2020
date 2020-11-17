@@ -1,0 +1,207 @@
+OOP Basics----------------------
+Why Class?
+- Code re-use
+
+What is Class?
+- Container (variables, and functions)
+- Variables (to sotre value)
+- Functions (operation on variable)
+
+How to use a Class?
+- By creating an object of class. (object create, set, process, get)
+
+How to set value(s) on object?
+- By using constructor (default/parameterized)
+- By using setter function(method)
+
+Functions Basics----------------------
+
+Fundamentals
+# Character Set - Alphabet of Java (256)
+# Data Types - boolean, byte, char, short, int, logn, float, double, string
+# Variables - declare, assign value, access value
+# Operators - Assignment (simple, multiple, shorthand), Arithematic, Relational, Logical, conditional, others, operator precedence and associativity.  
+
+# Expression - valid Java term.
+int x = 20; (int, x, =, 20)
+
+# Statement - Instruction to CPU.
+expression1 expression2, expression3, ...., expressionN
+
+# Block 
+{
+		
+}
+
+Input/Output Basics
+# Reading values from Keyboard (Scanner, User Defined Function*)
+# Display value - System.out.println();
+
+OOP Basics
+# Class (declare variables,  constructor(s) : default, parameterized, setter functions, getter functions, process functions)
+
+GUI Basics
+# JFrame, JLabel, JTextField, JButton
+# Event Handle - Click Event Handle on JButton
+
+# Functions
+- Expression1 Expression2 Expression3 (Statement) - Perform specific task.
+
+block
+{
+	Statement(s)
+}
+
+{
+	System.out.println("Hi");
+	System.out.println("Hello");
+	System.out.println("Hello World of Java");
+}
+
+- Assign meaningful name to specific block.
+
+print_info -> Function -> code re-use (write once; use many)
+{
+	System.out.println("Hi");
+	System.out.println("Hello");
+	System.out.println("Hello World of Java");
+}
+
+# Creating function
+# Calling function
+# Passing value to function
+# Returing value from function
+
+# Create any three functions.
+# Create a function which accept id, full name, contact address and print them.
+# Student Information Processing System - Solve using functions
+
+# Recrusive function
+- Function calling itself
+
+Example
+	public static void f1(){
+		System.out.println("Hello");
+		f1();
+	}
+
+
+# Control Statements
+# condition - > result of codition -> boolean
+(value1 operator value2) -> true/false
+
+# if statement
+
+if (condition){
+	Statement for true condition
+}
+
+
+# Looing Statements
+
+Design of Loop
+- Start no : 1
+- Stop no : 10
+- Condition : star_no<=stop_no
+- Statement(s) : System.out.println("Hello");
+- Modifier : ++
+
+- while loop
+- do while loop
+- for loop
+
+# Parameterized main method.
+
+# Function Overloading
+
+# Array Basics 
+
+- Variable - named memory place where we can store, retrieve, update - value.
+- Array - Collection of 1 or more than 1 items (values) of similar type.
+
+How to declare array?
+Syntax
+<data type> variable_name[]
+
+Example
+int n; //Variable - Single Value
+int nums[]; //Array - Multiple values
+
+OOP in Details --------------------
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+Encapsulation
+- Binding data variables/members and functions/methods - Covered
+- Access specifiers - specify (Security of data members)
+
+class class_name{
+	declare varaibale
+	function1(){}
+}
+
+How to access class, data members, functions?
+- Visibility of class, data members, and functions.
+
+class Class2Test{
+	main(String []args){
+		Class2 obj1 = new Class2();
+		//can access all the public resources
+		//obj1.x = 9; //Error : x is private
+		//obj1.y = 7; //Error : y is private
+		//obj1.z = 6; //Error : z is protected
+
+		obj1.setX(9); //public method
+		obj1.setY(7); //public method
+
+		println(obj1.getX()); //public method
+		println(obj1.getY()); //public method
+	}
+}
+
+Class3Test.java
+Class3 obj1 = new Class3(); //Call default constructor
+Class3 obj2 = new Class3(5, 3);//call parameterized ctor 
+
+//obj1.x = 30;
+//obj1.y = 78;
+
+obj1.setX(7);
+obj1.setY(3);
+print(obj1.calc_sum());
+print(obj1.getX());
+print(obj1.getY());
+
+- Constructor(s) | Object Initialization
+- Method overloading (Constructor Overloading)
+
+- this keyword
+
+Class4 obj1= new Class4();
+obj1.setX(89);
+print(obj1.getX());
+
+Class4 obj2 = new Class4(85);
+print(obj2.getX());
+
+Task: 
+- Create a class with person_id, full_name fields (member variables).
+- Create two constructors method.
+- Create setter/getter methods.
+- Create two objects of class.
+- Use setter to set values
+- Use getter to get and print values.
+
+Inheritance
+- Accessing the resources of existing class without creating an object.
+- Inherit the resources of existing class (public/protected - can access but private - cann't).
+
+Person
+- person_id
+- full_name
+
+NewPerson
+- contact_address
+

@@ -1,0 +1,57 @@
+Version Control System
+Case-1
+Step-1: File Create - 4:30 AM 				- log-1 
+Step-2: Class Add (Student) - 4:40 AM		- log-2
+Step-3: Class Add (NewStudent) - 4:40 AM	- log-3
+Step-4: Enum Add (RESULT) - 4:45 AM			- log-4
+Step-5: Class Add (Global) - 4:50 AM		- log-5	
+Step-6: Class Add (Main) - 4:51 AM			- log-6
+
+Current: 
+- Remove all files
+- Revert back all files
+	
+Case-2 - Code Sharing (Transfer)
+Office - PC - Coding
+House - PC - Coding
+
+- Email
+- Portable drive
+- Computer
+
+Solution:
+- Code (Project) -> Cloud (Drive) (Google Drive) + Version Control (CASE-1)
+- Add Users with Permission (Reader, Writer, Admin) 
+
+1. bitbucket.org (Sign-up - Create New User - User Name (Gmail Address & Password))
+2. Create Repository (Cloud Project/Folder) - Contains All resources of Project (Source Code, Images, Movies, Documents, Spreadsheet, Pdf etc)
+3. Clone Repository from Cloud to Local PC (Local Repo)
+4. Add Logs on Local Repo
+5. Push Logs on Cloud Repo
+6. Pull Logs on Local PC from Could
+
+Repository Address (URL)
+https://krishna_aryal@bitbucket.org/krishna_aryal/corejava_1.git
+
+- Git Client Application (Git for Windows) - Download and Install
+- https://git-scm.com/download/win
+- Start Git Bash (Here)
+
+- Linux Commands
+clear
+ls
+
+- Basic Git Commands
+git --version
+git --command
+
+git config --global user.name 'Display Name'
+git config --global user.email '******@gmail.com'
+git config --global user.password '*********'
+
+
+
+
+
+
+
