@@ -1,0 +1,13 @@
+Exceptions
+- No Error - Running well
+
+1 Syntax Error - Compile Time Error (Generate by Compiler)
+	- IDE (Integrated Development Environment) - Create, Save, Open, Edit, Compile, Run Program - Eclipse/Netbeans/DrJava/BlueJ 
+	- Solutions - Compiler will provide the suggestion about the Error
+
+2. Logical Error - Debugging tools
+	- Each and every line of code - observe and find the problem
+	- Stop Point, Step Into (Next Line), Step-over (Next Line), Start Debug, Stop Debug
+
+3. Exception Handling - Runtime Error Handling
+	- 	
