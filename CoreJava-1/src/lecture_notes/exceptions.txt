@@ -10,4 +10,22 @@ Exceptions
 	- Stop Point, Step Into (Next Line), Step-over (Next Line), Start Debug, Stop Debug
 
 3. Exception Handling - Runtime Error Handling
-	- 	
+	- try .... catch.....finally
+	
+	
+	variable(s) declare	
+	try{
+		input, process, output
+	}
+	catch(Exception ex){
+		print error message
+	}	
+	finally{
+		print finally message
+		free memory addresses
+		closes all open contents  (file, connections, other)
+	}
+	
+	try->if error found -> move to catch ->print error message ->move to finally -> do some tasks
+	try->if no errors -> move to finally -> do some tasks
+	
