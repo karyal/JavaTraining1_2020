@@ -30,3 +30,5 @@ Exceptions
 	try->if no errors -> move to finally -> do some tasks
 	
 4. User Defined Exceptions
+- Value validation (range error/type error) error generate by user.
+
