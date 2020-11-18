@@ -5,14 +5,14 @@ public class ExceptionsHandling {
 	public static void main(String[] args) {
 		//f1();
 		//f2();
-		f3();
+		//f3();
 	}
 	
 	public static void f3() {
 		try {
 			int nums[] = {3, 4, 5, 6, 2};
-			System.out.println(nums[5]);
-			System.out.println(nums[0]/8);
+			System.out.println(nums[2]);
+			System.out.println(nums[0]/0);
 		}
 		catch(ArrayIndexOutOfBoundsException ex) {
 			System.out.println("Error-1 : "+ex.getMessage());

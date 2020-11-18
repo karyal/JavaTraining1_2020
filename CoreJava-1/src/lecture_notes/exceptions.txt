@@ -29,3 +29,4 @@ Exceptions
 	try->if error found -> move to catch ->print error message ->move to finally -> do some tasks
 	try->if no errors -> move to finally -> do some tasks
 	
+4. User Defined Exceptions
