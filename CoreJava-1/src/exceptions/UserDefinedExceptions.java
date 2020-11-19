@@ -28,5 +28,8 @@ public class UserDefinedExceptions {
 		catch(MyException mex) {
 			System.out.println(mex);
 		}
+		catch(Exception ex) {
+			System.out.println(ex);
+		}
 	}
 }
