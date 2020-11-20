@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import java.lang.Exception;
+
 public class ExceptionTest2 {
 
 	public static void main(String[] args) {
@@ -36,5 +38,4 @@ public class ExceptionTest2 {
 		//return "";
 		return br.readLine();
 	}
-
 }
