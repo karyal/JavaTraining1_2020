@@ -1,10 +1,11 @@
 package collections.collections;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class HashSetExample {
 	public static void main(String[] args) {
-		HashSet<String> hs=new HashSet<String>();
+		Set<String> hs=new HashSet<String>();
 		hs.add("Apple");
 		hs.add("Watermelon");		
 		hs.add("Orange");
@@ -43,6 +44,8 @@ public class HashSetExample {
 		hs.add("Lemon");
 		
 		System.out.println(hs.size());
-		
+		for(Object item: hs) {
+			System.out.print(item+" ");
+		}	
 	}
 }

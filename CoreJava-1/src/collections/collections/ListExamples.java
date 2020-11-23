@@ -34,18 +34,22 @@ public class ListExamples {
 		list1.add(1234);
 		list1.add(1234567);
 		list1.add(123456789L);
+		
 		list1.add(1234.567F);
 		list1.add(123456789.1233456789);
 		list1.add("Kathmandu");
+		
 		list1.add(p1);
 		
 		list1.add(1,true);
+		list1.add(5, "Rajan");
+		
 		
 		int nums1[] = {2,3,4,5,5};
 		int nums2[] = {9,2,3,4,5};
 		
 		list1.add(nums1);		
-		list1.add(5, nums2);
+		list1.add(5, nums1);
 		
 		list2 = list1;
 		

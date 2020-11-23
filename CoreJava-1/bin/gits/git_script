@@ -1,0 +1,8 @@
+Basic Commands
+# git clone
+# git add .
+# git commit -m "comment"
+# git status
+# git log
+# git push -u origin master 
+# git pull 

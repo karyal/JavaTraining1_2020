@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class PriorityQueueExample {
 
-	public static void main(String[] args) {
+	public static void f1() {
 		Queue<String> pqueue = new PriorityQueue<>(); 
 		pqueue.add("SUN");
 		pqueue.add("MON");
@@ -16,12 +16,39 @@ public class PriorityQueueExample {
 		pqueue.add("SAT");
 		System.out.println(pqueue.size());
 		pqueue.remove();
-		System.out.println(pqueue.size());
 		
-		for(Object o: pqueue) {
-			System.out.println(o);
+		for(Object item : pqueue) {
+			System.out.println(item);
 		}
-
 	}
-
+	public static void print(Queue queue) {
+		for(Object item : queue) {
+			System.out.print(item+", ");
+		}
+		System.out.println();
+	}
+	public static void f2() {
+		Queue<String> queue = new PriorityQueue<>();
+		queue.add("SUN");
+		queue.add("MON");
+		queue.add("TUE");
+		queue.add("WED");
+		queue.add("THU");
+		queue.add("FRI");
+		queue.add("SAT");
+		System.out.println(queue.size());
+		print(queue);				
+		//System.out.println(queue.size());
+		queue.poll();
+		print(queue);
+		queue.remove();
+		print(queue);
+		queue.remove("SUN");
+		print(queue);
+	}
+	
+	public static void main(String[] args) {
+		f1();
+	}
+	
 }
