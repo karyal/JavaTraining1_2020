@@ -1,0 +1,75 @@
+Install Microsoft Visual C++ Redistributable
+- Download and Install
+
+XAMPP Server
+https://www.apachefriends.org/download.html
+- xampp-windows-x64-7.4.12-0-VC15.7z
+- Extract zip file
+- Copy and Paste xampp folder in root drive (d:/)
+- Run setup-xampp.bat 
+- Run XAMPP-Control
+	- Start Apache - Web Server (phpMyAdmin) [IDE for MySQL] (Integrated Development Environment)
+	- Start MySQL - Relational Database Management System
+
+# MySQL
+	- System (Env)
+	- Database - Collection of Tables
+	- Table - Collection of Columns
+	- Columns - Heading Row of Table (Data type)
+	- Rows - Record(s)
+
+# Microsoft SQL Server
+# Oracle
+# PostgreSQL
+
+http://localhost/ Or 127.0.0.1 - Current PC
+
+Database Management
+	# Creating Database
+	# Drop Database
+	# Open -Select
+
+User Management
+	# Server -> User Account -> Add user account -> User name:(admin) , Host name: (localhost) ,  Password: (admin@123), Re-type: (admin@123) -> Go
+	# Select user -> Edit privileges -> Database -> Select database (java1) -> go -> Database-specific privileges -> Check All -> Go
+	 
+Table Management
+# contacts - table name
+sn (int-2)  99
+name (String)
+address (String)
+email (String)
+phone (int-10)
+column name data type
+
+contacts
+sn (int-2)
+name (varchar-50)
+address (varchar-50)
+email (varchar-50)
+phone (varchar-10) 
+
+# Primary Key
+# Candidate Key
+
+#insert record
+insert into contact(sn, name, address, email, phone) values(1, 'krishna', 'ktm', 'krishna@gmail.com', '868768784') --full record insert
+insert into contact values(1, 'krishna', 'ktm', 'krishna@gmail.com', '868768784') --full record insert
+insert into contact(name, address, email, phone, sn) values('krishna'.'ktm', 'krishna@gmail.com', '868768784', 1) --full record insert
+insert into contact(name, sn) values('krishna', 1) --partial record insert
+
+# Select Record
+Syntax
+select field1, field2, field3, ...., fieldN from table_name
+select sn, name from contact
+select sn, name, address, email, phone from contact
+select * from contact order by sn
+select * from contact where sn = 5
+select * from contact where email like '%@gamil.com'
+select * from contact limit 10
+select * from contact where sn>=1 and sn<=20
+select * from contact where sn<=20 or address like '%P'
+
+# Connect with MySQL from JAVA
+- download mysql-connector-java library from mysql.com
+- right click on project -> build path -> configure build path -> libraries -> class path -> add external jars -> Browse and select mysql connector (jar file) -> Open -> Apply and Close

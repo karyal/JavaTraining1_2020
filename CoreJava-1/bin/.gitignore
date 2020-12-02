@@ -1,9 +1,2 @@
-/core/
-/exceptions/
-/functions/
-/gui/
-/oop/
-/threads/
-/collections/
+/jdbc/
 /lecture_notes/
-/fileio/
