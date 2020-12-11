@@ -25,6 +25,7 @@ public class DatabaseTest {
 		}
 		 */
 
+		/*
 		//Insert-3
 		System.out.print("Enter ID : ");
 		int sn = Integer.parseInt(new Scanner(System.in).nextLine());
@@ -43,7 +44,11 @@ public class DatabaseTest {
 		else {
 			System.out.println("Error to insert!");
 		}
-
 		mdb.select();
+		*/
+		
+		Contact contact=new Contact(1, "Krishna","NEP","krishna@1444", "98275975");
+		mdb.insert(contact);
+		
 	}
 }

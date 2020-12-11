@@ -2,6 +2,7 @@ package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
@@ -110,6 +111,54 @@ public class MyDatabase {
 		catch(Exception ex) {
 			result =false;
 			System.out.println("Error : "+ex.getMessage());
+		}
+		return result;
+	}
+	
+	public boolean insert(Contact contact) {		
+		boolean result=false;
+		//Step-1
+		//Pre-requirements
+		String driver="com.mysql.cj.jdbc.Driver";
+		String host="127.0.0.1";
+		int port = 3306;
+		String db_name="java1";
+		String db_user="admin";
+		String user_pass="admin@123";
+		
+		//SQL Statement
+		//String str_sql = "INSERT INTO contacts VALUES(107, 'kRISHNA','NEP','krishna@gmail.com','9843212345')";
+		String str_sql = "INSERT INTO contacts VALUES(?, ?, ?, ?, ?)";
+		
+		try {
+			//Step-2
+			//Load Driver
+			System.out.println("Connecting.......");
+			Class.forName(driver);
+			//Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/java1?", "admin", "admin@123");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://"+ host +":"+ port +"/"+ db_name +"?", db_user, user_pass);
+			System.out.println("Connected......");
+			
+			//Insert Record
+			System.out.println("Inserting.....");
+			Statement stat = conn.createStatement();
+			PreparedStatement pstat = conn.prepareStatement(str_sql);
+			pstat.setInt(1, contact.getSn());
+			pstat.setString(2, contact.getName());
+			pstat.setString(3, contact.getAddress());
+			pstat.setString(4, contact.getEmail());
+			pstat.setString(5, contact.getPhone());
+			
+			pstat.executeUpdate(); //executeUpdate-> Insert, Update, Delete Record
+			stat.close();
+			System.out.println("Inserted.....");
+			conn.close();
+			System.out.println("Close Connection");
+			result=true;
+		}
+		catch(Exception ex) {
+			result=false;
+			System.out.println("Error : "+ex.getMessage());			
 		}
 		return result;
 	}
