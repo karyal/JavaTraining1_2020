@@ -14,6 +14,8 @@ package core;
 - ;
 */
 
+// Hello
+
 // smallest valid component of java program - Expression(s)
 // Collection of expressions is called Statement //Task to CPU
 // Statements - Java Program
