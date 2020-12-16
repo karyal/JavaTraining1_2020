@@ -16,11 +16,11 @@ public class JDBC_GUI_1 implements ActionListener{
 	JFrame frame;
 	JLabel lbl_1, lbl_2,lbl_3,lbl_4,lbl_5;
 	JTextField txt_1, txt_2,txt_3,txt_4,txt_5;
-	JButton btn_save, btn_close;
-	
+	JButton btn_save, btn_close, btn_search, btn_update, btn_delete, show_table;
+		
 	public JDBC_GUI_1() {
 		frame = new JFrame("JDBC-DEMO");
-		frame.setSize(new Dimension(250, 320));
+		frame.setSize(new Dimension(250, 370));
 		frame.setResizable(false);
 		
 		lbl_1 = new JLabel("SN : ");
@@ -37,9 +37,17 @@ public class JDBC_GUI_1 implements ActionListener{
 		
 		btn_save = new JButton("SAVE");
 		btn_close = new JButton("CLOSE");
+		btn_search = new JButton("SEARCH");
+		btn_update = new JButton("UPDATE");		
+		btn_delete = new JButton("DELETE");
+		show_table = new JButton("SHOW TABLE");
 		
 		btn_save.addActionListener(this);
 		btn_close.addActionListener(this);
+		btn_search.addActionListener(this);
+		btn_update.addActionListener(this);
+		btn_delete.addActionListener(this);
+		show_table.addActionListener(this);
 		
 		frame.setLayout(new FlowLayout());
 		frame.add(lbl_1);
@@ -53,7 +61,11 @@ public class JDBC_GUI_1 implements ActionListener{
 		frame.add(lbl_5);
 		frame.add(txt_5);
 		frame.add(btn_save);
-		frame.add(btn_close);
+		frame.add(btn_search);
+		frame.add(btn_update);
+		frame.add(btn_delete);
+		frame.add(show_table);
+		frame.add(btn_close);		
 		frame.setVisible(true);
 	}
 	
@@ -85,9 +97,73 @@ public class JDBC_GUI_1 implements ActionListener{
 				JOptionPane.showMessageDialog(frame, "Error to save record");
 			}			
 		}
+		else if (e.getSource()==btn_search){
+			//Search and display record
+			int sn = Integer.parseInt(txt_1.getText());
+			MyDatabase mdb = new MyDatabase();
+			Contact contact = mdb.search(sn);
+			if (contact.getSn()==sn) {
+				//Display Record
+				//txt_1.setEditable(false);
+				txt_2.setText(contact.getName());
+				txt_3.setText(contact.getAddress());
+				txt_4.setText(contact.getEmail());
+				txt_5.setText(contact.getPhone());
+			}
+			else {
+				JOptionPane.showMessageDialog(frame, "Record Not Found!");
+				txt_2.setText("");
+				txt_3.setText("");
+				txt_4.setText("");
+				txt_5.setText("");
+			}
+		}
+		else if (e.getSource()==btn_update){
+			int sn;
+			String name, address, email, phone;
+			sn = Integer.parseInt(txt_1.getText());
+			name = txt_2.getText();
+			address = txt_3.getText();
+			email = txt_4.getText();
+			phone = txt_5.getText();
+			Contact contact = new Contact(sn, name, address, email, phone);			
+			MyDatabase mdb = new MyDatabase();
+			boolean result = mdb.update(contact);			
+			if (result ==true) {
+				//txt_1.setEditable(true);
+				JOptionPane.showMessageDialog(frame, "Record Update Successfully");				
+			}
+			else {
+				JOptionPane.showMessageDialog(frame, "Error to update record");
+			}
+		}
+		else if (e.getSource()==btn_delete){
+			int sn = Integer.parseInt(txt_1.getText());
+			MyDatabase mdb = new MyDatabase();
+			boolean result = mdb.delete(sn);
+			if (result ==true) {
+				txt_1.setText("");
+				txt_2.setText("");
+				txt_3.setText("");
+				txt_4.setText("");
+				txt_5.setText("");
+				JOptionPane.showMessageDialog(frame, "Record delete Successfully");				
+			}
+			else {
+				JOptionPane.showMessageDialog(frame, "Error to delete record");
+			}
+		}
+		else if (e.getSource()==show_table){
+			JDialog my_dialog = new JDialog(frame, "Records of Contacts", true);
+			my_dialog.setSize(new Dimension(250, 250));
+			my_dialog.setVisible(true);
+		}
 		else if (e.getSource()==btn_close){
 			System.out.println("Close");
 			System.exit(0);
 		}		
 	}
+	//Task-1: Display all records in JTable (table).?	
+	//Task-2: Export all the records of database in csv file.? 
+	//Task-3: Export all the records of database in pdf file.?	
 }
