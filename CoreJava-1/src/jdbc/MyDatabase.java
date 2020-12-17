@@ -3,8 +3,10 @@ package jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyDatabase {
 
@@ -163,7 +165,7 @@ public class MyDatabase {
 		return result;
 	}
 
-	public void select_all() {
+	public void display_all() {
 		//Step-1
 		//Pre-requirements
 		String driver="com.mysql.cj.jdbc.Driver";
@@ -205,7 +207,49 @@ public class MyDatabase {
 			System.out.println("Error : "+ex.getMessage());
 		}
 	}
-
+	
+	public List get_all() {		
+		List contacts = new ArrayList();
+		
+		//Step-1
+		//Pre-requirements
+		String driver="com.mysql.cj.jdbc.Driver";
+		String host="127.0.0.1";
+		int port = 3306;
+		String db_name="java1";
+		String db_user="admin";
+		String user_pass="admin@123";
+		
+		//SQL Statement - Select
+		String str_sql = "SELECT * FROM contacts ORDER BY sn ASC";
+		
+		try {
+			//Step-2
+			//Load Driver
+			Class.forName(driver);
+			Connection conn = DriverManager.getConnection("jdbc:mysql://"+ host +":"+ port +"/"+ db_name +"?", db_user, user_pass);
+			//Select Record
+			Statement stat = conn.createStatement();
+			ResultSet rs = stat.executeQuery(str_sql);			
+			while(rs.next()) {
+				Contact tmp = new Contact();
+				tmp.setSn(rs.getInt("sn"));
+				tmp.setName(rs.getString("name"));
+				tmp.setAddress(rs.getString("address"));
+				tmp.setEmail(rs.getString("email"));
+				tmp.setPhone(rs.getString("phone"));
+				contacts.add(tmp);
+			}
+			stat.close();
+			conn.close();
+		}
+		catch(Exception ex) {
+			System.out.println("Error : "+ex.getMessage());
+		}
+		return contacts;
+				
+	}
+	
 	public Contact search(int sn) {
 		//Step-1
 		//Pre-requirements

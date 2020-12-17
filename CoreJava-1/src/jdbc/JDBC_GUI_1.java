@@ -4,13 +4,17 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 public class JDBC_GUI_1 implements ActionListener{
 	JFrame frame;
@@ -155,8 +159,34 @@ public class JDBC_GUI_1 implements ActionListener{
 		}
 		else if (e.getSource()==show_table){
 			JDialog my_dialog = new JDialog(frame, "Records of Contacts", true);
-			my_dialog.setSize(new Dimension(250, 250));
+			
+			JTable table;
+			DefaultTableModel model = new DefaultTableModel();
+			String[] columnNames = {"SN", "NAME", "ADDRESS", "EMAIL", "PHONE"};
+			model.setColumnIdentifiers(columnNames);
+			table = new JTable();
+			table.setModel(model);
+			
+			table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+			table.setFillsViewportHeight(true);
+			JScrollPane scroll = new JScrollPane(table);
+			scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+			scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+			
+			//Add Records from MySQL to Table
+			MyDatabase mdb = new MyDatabase();
+			List persons = mdb.get_all();			
+			
+			for(Object person: persons) {
+				Contact p1 = (Contact) person;
+				model.addRow(new Object[]{p1.getSn(), p1.getName(), p1.getAddress(), p1.getEmail(), p1.getPhone()});
+			}
+			
+			my_dialog.setSize(new Dimension(550, 250));
+			my_dialog.setLayout(new FlowLayout());
+			my_dialog.add(scroll);
 			my_dialog.setVisible(true);
+			my_dialog.setResizable(false);
 		}
 		else if (e.getSource()==btn_close){
 			System.out.println("Close");
