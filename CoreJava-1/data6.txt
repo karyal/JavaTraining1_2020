@@ -1,0 +1,1 @@
+Java will read all input as a stream of bytes. The InputStream class is the superclass of all classes representing an input stream of bytes.

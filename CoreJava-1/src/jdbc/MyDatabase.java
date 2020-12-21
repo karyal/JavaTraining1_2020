@@ -130,7 +130,7 @@ public class MyDatabase {
 
 		//SQL Statement
 		//String str_sql = "INSERT INTO contacts VALUES(107, 'kRISHNA','NEP','krishna@gmail.com','9843212345')";
-		String str_sql = "INSERT INTO contacts VALUES(?, ?, ?, ?, ?)";
+		String str_sql = "INSERT INTO contacts(name, address, email, phone) VALUES(?, ?, ?, ?)";
 
 		try {
 			//Step-2

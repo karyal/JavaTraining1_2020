@@ -73,3 +73,12 @@ select * from contact where sn<=20 or address like '%P'
 # Connect with MySQL from JAVA
 - download mysql-connector-java library from mysql.com
 - right click on project -> build path -> configure build path -> libraries -> class path -> add external jars -> Browse and select mysql connector (jar file) -> Open -> Apply and Close
+
+# Insert Record
+# Select Record (Select All/Search)
+# Update Record
+# Delete Record
+
+# CRUD Application 
+# Others
+- File (PDF, Text file, Excel Book, Word Document, Image) - CRUD
