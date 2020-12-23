@@ -11,7 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class Button {
-	JFrame frame;	
+	JFrame frame;
+	
 	JButton btn_ok; //Declare an object of JButton Class
 	JButton btn_close;
 	JButton btn_save;		

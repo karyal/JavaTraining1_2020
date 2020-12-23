@@ -20,8 +20,8 @@ public class ScrollPaneTest {
 		frame.setLayout(new FlowLayout());
 		frame.setLocationByPlatform(true);
 						
-		textArea1 = new JTextArea(10,10);
-		JScrollPane scrollPane = new JScrollPane(textArea1,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		textArea1 = new JTextArea(10, 10);
+		JScrollPane scrollPane = new JScrollPane(textArea1, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		
 		panel = new JPanel();
 		panel.setLayout(new FlowLayout());

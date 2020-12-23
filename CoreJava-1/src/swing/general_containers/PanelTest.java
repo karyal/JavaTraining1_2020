@@ -29,7 +29,7 @@ public class PanelTest {
 		panel2 = new JPanel();
 		panel2.setSize(new Dimension(250, 250));
 		panel2.setBackground(Color.blue);
-		panel2.add(new JButton("OK"));
+		panel2.add(new JButton("CLOSE"));
 		
 		frame.setLayout(new FlowLayout());
 		frame.add(panel1);

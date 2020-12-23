@@ -15,7 +15,7 @@ public class EditorPaneTextPane {
 	
 	public EditorPaneTextPane () {
 		frame=new JFrame("Button Test");
-		frame.setSize(new Dimension(250, 250));
+		frame.setSize(new Dimension(250, 350));
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new FlowLayout());

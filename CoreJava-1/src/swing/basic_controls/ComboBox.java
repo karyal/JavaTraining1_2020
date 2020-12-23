@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 
 public class ComboBox {
 	JFrame frame;
+	
 	JComboBox cmb1;
 	JComboBox cmb2;
 	JComboBox cmb3;
@@ -24,7 +25,7 @@ public class ComboBox {
 		
 		cmb1 = new JComboBox();
 		
-		String items[]= {"ONE","TWO","THREE","FOUR","FIVE"}; //Database?
+		String items[] = {"ONE","TWO","THREE","FOUR","FIVE"}; //Database?
 		
 		Vector vlist1 = new Vector(); //Items from File, Database, Web, ... other sources
 		vlist1.add("ONE");
@@ -36,7 +37,7 @@ public class ComboBox {
 		cmb2 = new JComboBox(items);
 		cmb3 = new JComboBox(vlist1);
 		
-		ComboBoxModel cmb_model = cmb1.getModel();
+		//ComboBoxModel cmb_model = cmb1.getModel();
 		//cmb_model //Process on cmb_1
 		
 		frame.add(cmb1);

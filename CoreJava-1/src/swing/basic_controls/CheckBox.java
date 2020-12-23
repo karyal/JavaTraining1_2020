@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 
 public class CheckBox {
 	JFrame frame;
+	
 	JCheckBox chk_1;
 	JCheckBox chk_2;
 	JCheckBox chk_3;

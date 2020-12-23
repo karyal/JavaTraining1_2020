@@ -39,6 +39,7 @@ public class FileChooser implements ActionListener{
 		if (e.getSource()==btn_open) {
 			System.out.println("OK");
 			fc.showOpenDialog(frame);
+			//fc.showSaveDialog(frame);
 		}		
 	}
 }

@@ -9,7 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class ActionListener1 extends JFrame implements ActionListener {
+	
 	JButton btn1;
+	
 	public ActionListener1() {
 		setTitle("Action Listener Test1");
 		setSize(new Dimension(250, 250));
