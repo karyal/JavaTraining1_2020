@@ -1,0 +1,14 @@
+Generic
+- General Class which can hold any types of data as parameter.
+- Instance Variable - type Object, T 
+
+Collections
+- Multiple values and all types
+- User Defined Collection
+- Pre-Defined Collections ( List, Queue, Set, Map)
+
+- https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/package-summary.html#CollectionsFramework
+ 
+ Reflections
+ - Getting Meta-data of Class
+ - Class Name, Instance Variables, Constructors, Methods - Details

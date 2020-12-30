@@ -1,0 +1,34 @@
+Exceptions
+- No Error - Running well
+
+1 Syntax Error - Compile Time Error (Generate by Compiler)
+	- IDE (Integrated Development Environment) - Create, Save, Open, Edit, Compile, Run Program - Eclipse/Netbeans/DrJava/BlueJ 
+	- Solutions - Compiler will provide the suggestion about the Error
+
+2. Logical Error - Debugging tools
+	- Each and every line of code - observe and find the problem
+	- Stop Point, Step Into (Next Line), Step-over (Next Line), Start Debug, Stop Debug
+
+3. Exception Handling - Runtime Error Handling
+	- try .... catch.....finally
+	
+	
+	variable(s) declare	
+	try{
+		input, process, output
+	}
+	catch(Exception ex){
+		print error message
+	}	
+	finally{
+		print finally message
+		free memory addresses
+		closes all open contents  (file, connections, other)
+	}
+	
+	try->if error found -> move to catch ->print error message ->move to finally -> do some tasks
+	try->if no errors -> move to finally -> do some tasks
+	
+4. User Defined Exceptions
+- Value validation (range error/type error) error generate by user.
+

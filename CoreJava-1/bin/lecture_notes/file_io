@@ -1,0 +1,15 @@
+1. File Management
+	- Create file and folder, Select file/folder, rename, delete, list all
+
+File Class
+
+Package
+java.io.File
+
+Instance Variables/Fields/Data Members
+
+2. Write/Read from file - Traditional 
+
+3. NIO - New IO - Modern 
+
+ 
