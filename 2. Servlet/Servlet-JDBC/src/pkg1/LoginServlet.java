@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 		boolean result = mdb.login(txt_user, txt_pass);
 		
 		//if((txt_user.equals("admin")) && (txt_pass.equals("admin@123"))) {
-		if (result ==true) {
+		if (result == true) {
 			out.print("Welcome "+txt_user);
 			rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
@@ -39,6 +39,6 @@ public class LoginServlet extends HttpServlet {
 			out.print("Error: user name or password!");
 			rd = request.getRequestDispatcher("login.jsp");
 			rd.include(request, response);
-		}		
+		}
 	}
 }
