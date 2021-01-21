@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Servlet-ContextConfig</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Context Variable | Global Variable -->
+  <context-param>
+	  <param-name>web_site</param-name>
+	  <param-value>http://abc.com.np</param-value>
+  </context-param>
+  
+  <!-- Servlet-1 -->
+  <servlet>
+  	<servlet-name>obj1</servlet-name>
+  	<servlet-class>pkg1.Servlet1</servlet-class>
+  	
+  	<init-param>
+  		<param-name>page_heading</param-name>
+  		<param-value>About Us</param-value>
+  	</init-param>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>obj1</servlet-name>
+  	<url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Servlet-2 -->
+  <servlet>
+  	<servlet-name>obj2</servlet-name>
+  	<servlet-class>pkg1.Servlet2</servlet-class>
+  	
+  	<init-param>
+  		<param-name>page_heading</param-name>
+  		<param-value>Contact Us</param-value>
+  	</init-param>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>obj2</servlet-name>
+  	<url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
